@@ -1,0 +1,27 @@
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  list-style-type: none;
+
+  .login {
+    list-style-type: none;
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    li {
+      margin-left: 2rem;
+    }
+  }
+
+  .menu {
+    list-style-type: none;
+    display: flex;
+
+    li {
+      margin-left: 2rem;
+    }
+  }
+
+}
