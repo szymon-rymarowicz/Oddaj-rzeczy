@@ -5,7 +5,7 @@ import "./HomeContact.scss";
 class HomeContact extends Component {
     render() {
         return (
-            <div name="HomeContact" className="container header">Lorem Ipsum</div>
+            <div name="HomeContact" className="container contact">Lorem Ipsum</div>
         )
     }
 }

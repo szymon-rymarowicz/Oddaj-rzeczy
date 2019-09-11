@@ -28,7 +28,7 @@ class Navigation extends Component {
         };
 
         return (
-            <nav className="container">
+            <nav>
                 <ul className="login">
                     <li> <NavLink exact to="/logowanie" style={grey} activeStyle={selectedStyle1}>Zaloguj</NavLink> </li>
                     <li> <NavLink exact to="/rejestracja" style={grey} activeStyle={selectedStyle1}>Załóż konto</NavLink > </li>

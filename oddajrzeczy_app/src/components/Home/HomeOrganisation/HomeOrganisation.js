@@ -5,7 +5,7 @@ import "./HomeOrganisation.scss";
 class HomeOrganisation extends Component {
     render() {
         return (
-            <div name="HomeOrganisation" className="container header">Lorem Ipsum</div>
+            <div name="HomeOrganisation" className="container organisation">Lorem Ipsum</div>
         )
     }
 }

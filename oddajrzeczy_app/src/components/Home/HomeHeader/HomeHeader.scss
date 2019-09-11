@@ -1,5 +1,25 @@
-.header {
-  height: 500px;
-  margin-bottom: 20px;
-  border: 2px solid black;
+.home_header {
+  height: 37.5rem;
+  display: flex;
+  margin-right: 10%;
+
+    .background_image {
+      width: 50%;
+      background-image: url("../../../assets/Home-Hero-Image.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-x: -18rem;
+    }
+
+    .home {
+      width: 50%;
+      flex-direction: column;
+
+      .main {
+      
+      }
+
+    }
 }
+
+
