@@ -1,14 +1,12 @@
 nav {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  list-style-type: none;
 
   .login {
     list-style-type: none;
     display: flex;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 2rem 0;
+    justify-content: flex-end;
 
     li {
       margin-left: 2rem;
@@ -18,6 +16,8 @@ nav {
   .menu {
     list-style-type: none;
     display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
 
     li {
       margin-left: 2rem;

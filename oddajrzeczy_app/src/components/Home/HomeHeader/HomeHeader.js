@@ -5,7 +5,7 @@ import "./HomeHeader.scss";
 class HomeHeader extends Component {
     render() {
         return (
-            <div></div>
+            <div name="HomeHeader" className="container header">Lorem Ipsum</div>
         )
     }
 }
