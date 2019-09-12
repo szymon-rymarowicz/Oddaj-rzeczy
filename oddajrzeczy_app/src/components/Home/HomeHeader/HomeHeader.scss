@@ -1,3 +1,7 @@
+@import "../../../SCSS/settings/colors";
+@import "../../../SCSS/settings/fonts";
+
+
 .home_header {
   height: 37.5rem;
   display: flex;
@@ -16,9 +20,41 @@
       flex-direction: column;
 
       .main {
-      
-      }
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 4rem;
 
+
+        h1 {
+          font-size: 1.5rem;
+          font-weight: 200;
+          text-align: center;
+          margin: 2rem 0 ;
+        }
+
+        .button {
+          margin-top: 2rem;
+          display: flex;
+
+          button {
+            width: 13.5rem;
+            height: 5rem;
+            border: 0.125rem solid $grey;
+            padding: 0.5rem;
+            line-height: 1.5rem;
+            margin: 0 1rem;
+
+            a {
+              text-decoration: none;
+              font-size: 1.3rem;
+              text-transform: uppercase;
+              color: $darkgrey;
+
+            }
+          }
+        }
+      }
     }
 }
 

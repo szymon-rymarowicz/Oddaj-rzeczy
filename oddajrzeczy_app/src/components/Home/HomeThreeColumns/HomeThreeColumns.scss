@@ -1,4 +1,41 @@
+@import "../../../SCSS/settings/colors";
+@import "../../../SCSS/settings/fonts";
+
+
 .threecolumns {
-  height: 500px;
-  margin-bottom: 20px;
+  height: 20rem;
+  background-color: $yellow;
+
+  .section_columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10%;
+    height: 100%;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 2rem;
+    width: 29%;
+
+    h3 {
+      font-size: 3.5rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    span {
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
 }
