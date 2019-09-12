@@ -1,3 +1,7 @@
+@import "../../SCSS/settings/colors";
+@import "../../SCSS/settings/fonts";
+@import "../../SCSS/settings/mixins";
+
 nav {
   display: flex;
   flex-direction: column;
@@ -5,11 +9,17 @@ nav {
   .login {
     list-style-type: none;
     display: flex;
-    margin: 2rem 0;
+    margin: 2rem 0 1.5rem 0.5rem;
     justify-content: flex-end;
 
     li {
       margin-left: 2rem;
+
+      a {
+        text-decoration: none;
+        color: $grey;
+        font-size: 0.7rem;
+      }
     }
   }
 
@@ -21,6 +31,13 @@ nav {
 
     li {
       margin-left: 2rem;
+
+      a {
+        text-decoration: none;
+        color: $darkgrey;
+        font-size: 0.85rem;
+        cursor: pointer;
+      }
     }
   }
 

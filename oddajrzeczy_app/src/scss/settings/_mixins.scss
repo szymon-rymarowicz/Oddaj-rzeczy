@@ -1,0 +1,34 @@
+@mixin backgroundLogo {
+  width: 4rem;
+  height: 4rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 1rem;
+}
+
+@mixin buttonGiveBack {
+  width: 15.5rem;
+  height: 6rem;
+  border: 0.0625rem solid $grey;
+  padding: 0.5rem;
+  line-height: 1.5rem;
+  margin: 0 1rem;
+
+  a {
+    text-decoration: none;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    color: $darkgrey;
+    font-weight: 200;
+    line-height: 2rem;
+    letter-spacing: 0.125rem;
+  }
+}
+
+@mixin decoration {
+  background-image: url("../../assets/Decoration.svg");
+  height: 2rem;
+  width: 12rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

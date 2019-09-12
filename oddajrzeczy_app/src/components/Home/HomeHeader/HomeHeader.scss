@@ -1,9 +1,10 @@
 @import "../../../SCSS/settings/colors";
 @import "../../../SCSS/settings/fonts";
+@import "../../../SCSS/settings/mixins";
 
 
 .home_header {
-  height: 37.5rem;
+  height: 45rem;
   display: flex;
   margin-right: 10%;
 
@@ -12,7 +13,7 @@
       background-image: url("../../../assets/Home-Hero-Image.jpg");
       background-size: cover;
       background-repeat: no-repeat;
-      background-position-x: -18rem;
+      background-position-x: -22rem;
     }
 
     .home {
@@ -33,25 +34,16 @@
           margin: 2rem 0 ;
         }
 
+        .decoration {
+          @include decoration;
+        }
+
         .button {
-          margin-top: 2rem;
+          margin-top: 2.5rem;
           display: flex;
 
           button {
-            width: 13.5rem;
-            height: 5rem;
-            border: 0.125rem solid $grey;
-            padding: 0.5rem;
-            line-height: 1.5rem;
-            margin: 0 1rem;
-
-            a {
-              text-decoration: none;
-              font-size: 1.3rem;
-              text-transform: uppercase;
-              color: $darkgrey;
-
-            }
+            @include buttonGiveBack;
           }
         }
       }

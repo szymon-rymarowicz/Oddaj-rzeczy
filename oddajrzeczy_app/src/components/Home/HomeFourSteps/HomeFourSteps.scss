@@ -1,0 +1,96 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/fonts";
+@import "../../../scss/settings/mixins";
+
+.fourSteps {
+  height: 38rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .head {
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .decoration {
+      @include decoration;
+    }
+  }
+
+  .main {
+    height: 16rem;
+    background-color: $white;
+    width: 100%;
+
+    .step_columns {
+      margin: 0 15%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+
+      .step {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        width: 12%;
+
+        hr {
+          border-top: 1px solid $darkgrey;
+          width: 4rem;
+          margin-bottom: 0.5rem;
+        }
+
+        span {
+          font-size: 0.9rem;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          font-size: 0.8rem;
+        }
+
+        .logo1 {
+          @include backgroundLogo;
+          background-image: url("../../../assets/Icon-1.svg");
+        }
+
+        .logo2 {
+          @include backgroundLogo;
+          background-image: url("../../../assets/Icon-2.svg");
+        }
+
+        .logo3 {
+          @include backgroundLogo;
+          background-image: url("../../../assets/Icon-3.svg");
+        }
+
+        .logo4 {
+          @include backgroundLogo;
+          background-image: url("../../../assets/Icon-4.svg");
+        }
+      }
+    }
+  }
+
+  .foot {
+    height: 11rem;
+    padding-top: 2rem;
+
+    button {
+      @include buttonGiveBack;
+    }
+
+  }
+}
