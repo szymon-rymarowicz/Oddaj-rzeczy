@@ -16,10 +16,7 @@
     justify-content: center;
 
     h2 {
-      font-size: 1.5rem;
-      font-weight: 400;
-      text-align: center;
-      margin-bottom: 1.5rem;
+      @include header;
     }
 
     .decoration {
@@ -33,7 +30,7 @@
     width: 100%;
 
     .step_columns {
-      margin: 0 15%;
+      margin: 0 20%;
       display: flex;
       justify-content: space-between;
       align-items: center;

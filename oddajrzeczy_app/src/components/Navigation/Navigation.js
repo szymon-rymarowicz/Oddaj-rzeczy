@@ -10,7 +10,7 @@ class Navigation extends Component {
     render() {
         const selectedStyleLog = {
             border: "0.0625rem solid #FAD648",
-            padding: "0.3rem 0.5rem"
+
         };
 
         const selectedStyleStart = {

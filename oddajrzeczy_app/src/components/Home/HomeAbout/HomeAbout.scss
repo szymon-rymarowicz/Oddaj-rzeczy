@@ -1,0 +1,53 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/fonts";
+@import "../../../scss/settings/mixins";
+
+
+.about {
+  display: flex;
+  width: 100%;
+  height: 43rem;
+  color: $darkgrey;
+
+  .aboutBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    background-color: $white;
+
+    h2 {
+      @include header;
+    }
+
+    .decoration {
+      @include decoration;
+    }
+
+    p {
+      text-align: center;
+      width: 60%;
+      font-size: 1.5rem;
+      line-height:2.5rem;
+      margin: 2rem;
+      color: $darkgrey;
+    }
+    .signature {
+      background-image: url("../../../assets/Signature.svg");
+      width: 11rem;
+      height: 11rem;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-left: 50%;
+    }
+  }
+
+  .aboutPhoto {
+    background-image: url("../../../assets/People.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+  }
+
+}

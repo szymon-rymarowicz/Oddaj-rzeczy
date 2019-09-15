@@ -4,7 +4,7 @@
 
 
 .home_header {
-  height: 45rem;
+  height: 43rem;
   display: flex;
   margin-right: 10%;
 
@@ -28,10 +28,7 @@
 
 
         h1 {
-          font-size: 1.5rem;
-          font-weight: 200;
-          text-align: center;
-          margin: 2rem 0 ;
+          @include header;
         }
 
         .decoration {

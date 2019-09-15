@@ -1,4 +1,123 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/fonts";
+@import "../../../scss/settings/mixins";
+
+
 .organisation {
-  height: 500px;
-  margin-bottom: 20px;
-}
+  height: 46rem;
+  margin: 0 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .head {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      @include header;
+    }
+
+    .decoration {
+      @include decoration;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2rem;
+
+      .borderButton {
+        border: 0.0625rem solid $grey;
+      }
+
+
+      button {
+        @include buttonOrganisation;
+      }
+    }
+
+    span {
+      width: 50%;
+      height: 15%;
+      margin-top: 3rem;
+      text-align: center;
+    }
+  }
+
+  .foot {
+    height: 50%;
+    width: 100%;
+
+  .foundationInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.5rem 0;
+    position: relative;
+
+    &:nth-of-type(2):before {
+      content: "";
+      width: 100%;
+      border-top: 0.0625rem solid $grey;
+      position: absolute;
+      bottom: 3.8rem;
+    }
+
+    &:nth-of-type(2):after {
+      content: "";
+      width: 100%;
+      border-top: 0.0625rem solid $grey;
+      position: absolute;
+      top: 3.8rem;
+    }
+
+      li {
+        list-style-type: none;
+
+        h3 {
+          font-size: 1.1rem;
+          font-weight: 300;
+        }
+
+        p {
+          font-size: 0.8rem;
+        }
+      }
+
+      span {
+        font-weight: 300;
+        font-size: 0.9rem;
+        color: $grey;
+      }
+    }
+
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+
+
+      button {
+        margin: 0 0.5rem;
+        padding: 0.7rem 0.65rem;
+        user-select: none;
+        cursor: pointer;
+        outline: none;
+        font-weight: 300;
+        font-size: 0.8rem;
+      }
+    }
+
+    .borderButton {
+      border: 0.0625rem solid $grey;
+    }
+
+    }
+  }
+
+
+
