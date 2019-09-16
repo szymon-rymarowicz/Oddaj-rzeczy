@@ -1,0 +1,32 @@
+.footer {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  height: 5%;
+  margin-top: 10%;
+  font-size: 0.8rem;
+  margin-right: 5%;
+
+  .icons {
+    display: flex;
+
+
+    .facebook {
+      background-image: url("../../assets/Facebook.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 1.35rem;
+      height: 1.35rem;
+      margin: 0 0.5rem;
+    }
+
+    .instagram {
+      background-image: url("../../assets/Instagram.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 1.35rem;
+      height: 1.35rem;
+      margin: 0 0.5rem;
+    }
+  }
+}

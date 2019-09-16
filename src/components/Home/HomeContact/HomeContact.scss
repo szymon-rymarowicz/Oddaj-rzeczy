@@ -1,4 +1,95 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/fonts";
+@import "../../../scss/settings/mixins";
+
 .contact {
-  height: 500px;
-  margin-bottom: 20px;
+  height: 46rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+
+
+
+  &:after {
+    content: "";
+    background: url("../../../assets/Background-Contact-Form.jpg") no-repeat;
+    background-position-y: -2rem;
+    background-size: cover;
+    opacity: 0.25;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 85%;
+    justify-content: center;
+
+
+    h2 {
+      @include header;
+    }
+
+    .decoration {
+      @include decoration;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .textareaLabel {
+        margin-top: 2rem;
+        width: 24rem;
+        font-size: 0.75rem;
+        font-weight: bold;
+
+        textarea {
+          margin-top: 0.55rem;
+          border-bottom: 0.0625rem solid #737373;
+          width: 100%;
+          padding-bottom: 0.125rem;
+          font-size: 0.77rem;
+          resize: none;
+          background: none;
+        }
+
+      }
+
+      div {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        .inputLabel {
+          width: 11.5rem;
+          margin: 3rem 0.5rem 0 0.5rem;
+          font-size: 0.75rem;
+          font-weight: bold;
+
+
+          input {
+            margin-top: 1rem;
+            font-size: 0.77rem;
+            border-bottom: 0.0625rem solid $grey;
+            padding-bottom: 0.125rem;
+            width: 100%;
+            background: none;
+          }
+        }
+      }
+    }
+  }
 }
