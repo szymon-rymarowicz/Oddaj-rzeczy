@@ -50,6 +50,10 @@
       align-items: center;
       justify-content: center;
 
+      ::placeholder {
+        color: $white;
+      }
+
       .textareaLabel {
         margin-top: 2rem;
         width: 24rem;
@@ -65,7 +69,6 @@
           resize: none;
           background: none;
         }
-
       }
 
       div {
