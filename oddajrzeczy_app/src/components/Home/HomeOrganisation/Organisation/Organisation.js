@@ -7,7 +7,7 @@ class Organisation extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            foundation: [
+            organisation: [
                 {
                     title: '"Lorem Ipsum 1"',
                     mission: "Quis imperdiet massa tincidunt nunc.",
@@ -18,7 +18,11 @@ class Organisation extends Component {
                     mission: "Arcu dui vivamus arcu felis bibendum ut tristique.",
                     givenAway: "Sinto, prendo, questa"
                 },
-                {title: '"Lorem Ipsum 3"', mission: "Massa enim nec dui nunc mattis enim.", givenAway: "Lansa, ristas"},
+                {
+                    title: '"Lorem Ipsum 3"',
+                    mission: "Massa enim nec dui nunc mattis enim.",
+                    givenAway: "Lansa, ristas"
+                },
                 {
                     title: '"Lorem Ipsum 4"',
                     mission: "Risus in hendrerit gravida rutrum quisque.",
@@ -37,7 +41,7 @@ class Organisation extends Component {
             ],
 
             currentPage: 1,
-            foundationPerPage: 3,
+            organisationPerPage: 3,
             border1: "borderButton",
             border2: ""
         };
@@ -56,19 +60,19 @@ class Organisation extends Component {
     }
 
         render() {
-            const {foundation, currentPage, foundationPerPage, border1, border2} = this.state;
+            const {organisation, currentPage, organisationPerPage, border1, border2} = this.state;
 
             //foundation
-            const indexOfLastFoundation = currentPage * foundationPerPage;
-            const indexOfFirstFoundation = indexOfLastFoundation - foundationPerPage;
-            const currentFoundations = foundation.slice(indexOfFirstFoundation, indexOfLastFoundation);
+            const indexOfLastOrganisation = currentPage * organisationPerPage;
+            const indexOfFirstOrganisation = indexOfLastOrganisation - organisationPerPage;
+            const currentOrganisations = organisation.slice(indexOfFirstOrganisation, indexOfLastOrganisation);
 
-            const renderFoundation = currentFoundations.map((foundation, index) => {
+            const renderOrganisation = currentOrganisations.map((organisation, index) => {
                 return (
 
-                    <ul key={index} className="foundationInfo">
-                        <li><h3>Organizacja {foundation.title}</h3> <p>Cel i misja: {foundation.mission}</p></li>
-                        <span>{foundation.givenAway}</span>
+                    <ul key={index} className="info">
+                        <li><h3>Organizacja {organisation.title}</h3> <p>Cel i misja: {organisation.mission}</p></li>
+                        <span>{organisation.givenAway}</span>
                     </ul>
                 )
             });
@@ -76,7 +80,7 @@ class Organisation extends Component {
 
             return (
                 <>
-                    {renderFoundation}
+                    {renderOrganisation}
                     <div className="buttons">
                         <button id={1} className={border1} onClick={(e) => this.handleClick(e, 1)}>1</button>
                         <button id={2} className={border2} onClick={(e) => this.handleClick(e, 2)}>2</button>

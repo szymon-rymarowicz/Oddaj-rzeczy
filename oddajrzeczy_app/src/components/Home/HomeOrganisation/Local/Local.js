@@ -7,25 +7,25 @@ class Local extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            foundation: [
+            local: [
                 {title: '"Lorem Ipsum 1"', mission: "Risus in hendrerit gravida rutrum quisque.", givenAway: "Sinto, prendo, questa"},
                 {title: '"Lorem Ipsum 2"', mission: "Ultricies mi eget mauris pharetra et ultrices.", givenAway: "Bento, vintre, sed"},
                 {title: '"Lorem Ipsum 3"', mission: "Sed ullamcorper morbi tincidunt ornare massa eget.", givenAway: "Questas, bonevto, sintas"}
             ],
 
             currentPage: 1,
-            foundationPerPage: 3,
+            localPerPage: 3,
         };
     }
 
     render() {
 
-        const renderFoundation = this.state.foundation.map((foundation, index) => {
+        const renderLocal = this.state.local.map((local, index) => {
             return (
 
-                <ul key={index} className="foundationInfo">
-                    <li><h3>Zbiórka {foundation.title}</h3> <p>Cel i misja: {foundation.mission}</p></li>
-                    <span>{foundation.givenAway}</span>
+                <ul key={index} className="info">
+                    <li><h3>Zbiórka {local.title}</h3> <p>Cel i misja: {local.mission}</p></li>
+                    <span>{local.givenAway}</span>
                 </ul>
             )
         });
@@ -33,7 +33,7 @@ class Local extends Component {
 
         return (
             <>
-                {renderFoundation}
+                {renderLocal}
             </>
         )
     }

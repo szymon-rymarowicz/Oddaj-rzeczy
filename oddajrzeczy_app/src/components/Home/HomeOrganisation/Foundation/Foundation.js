@@ -24,34 +24,34 @@ class Foundation extends Component {
                     givenAway: "ubrania, jedzenie, ciepłe koce"
                 },
                 {
-                    title: '"Dbam o Zdrowie2"',
-                    mission: "Pomoc osobom znajdującym się w ciężkiej sytuacji życiowej.2",
-                    givenAway: "2ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+                    title: '"Lorem Ipsum 4"',
+                    mission: "Ultricies mi eget mauris pharetra et ultrices.",
+                    givenAway: "Egsteno, bravto, sedino"
                 },
                 {
-                    title: '"Dla Dzieci2"',
-                    mission: "Pomoc dzieciom z ubogich rodzin.2",
-                    givenAway: "2ubrania, meble, zabawki"
+                    title: '"Lorem Ipsum 5"',
+                    mission: "Sed ullamcorper morbi tincidunt ornare massa eget.",
+                    givenAway: "Questas, bonevto, sintas"
                 },
                 {
-                    title: '"Bez Domu 2"',
-                    mission: "Pomoc dla osób nie posiadających miejsca zamieszkania.2",
-                    givenAway: "2ubrania, jedzenie, ciepłe koce"
+                    title: '"Lorem Ipsum 6"',
+                    mission: "Massa enim nec dui nunc mattis enim.",
+                    givenAway: "Egestas, sed, besto"
                 },
                 {
-                    title: '"Dbam o Zdrowie3"',
-                    mission: "Pomoc osobom znajdującym się w ciężkiej sytuacji życiowej.3",
-                    givenAway: "3ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+                    title: '"Lorem Ipsum 7"',
+                    mission: "Arcu dui vivamus arcu felis bibendum ut tristique.",
+                    givenAway: "Sinto, prendo, questa"
                 },
                 {
-                    title: '"Dla Dzieci3"',
-                    mission: "Pomoc dzieciom z ubogich rodzin.3",
-                    givenAway: "3ubrania, meble, zabawki"
+                    title: '"Lorem Ipsum 8"',
+                    mission: "Ultricies mi eget mauris pharetra et ultrices.",
+                    givenAway: "Bento, vintre, sed"
                 },
                 {
-                    title: '"Bez Domu 3"',
-                    mission: "Pomoc dla osób nie posiadających miejsca zamieszkania.3",
-                    givenAway: "3ubrania, jedzenie, ciepłe koce"
+                    title: '"Lorem Ipsum 9"',
+                    mission: "Sed ullamcorper morbi tincidunt ornare massa eget.",
+                    givenAway: "Sinto, prendo, questa"
                 },
             ],
 
@@ -89,7 +89,7 @@ class Foundation extends Component {
         const renderFoundation = currentFoundations.map((foundation, index) => {
             return (
 
-                <ul key={index} className="foundationInfo">
+                <ul key={index} className="info">
                     <li><h3>Fundacja {foundation.title}</h3> <p>Cel i misja: {foundation.mission}</p></li>
                     <span>{foundation.givenAway}</span>
                 </ul>
