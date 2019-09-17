@@ -2,7 +2,79 @@ import React,{Component} from 'react';
 import "./HomeContact.scss";
 import Footer from "../../Footer/Footer";
 
+
 class HomeContact extends Component {
+
+    state={
+        name:'',
+        email:'',
+        message:'',
+        formSend:false,
+        errName:false,
+        errEmail:false,
+        errMessage:false
+    };
+
+    handleChange = e => {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    };
+    handleSubmit=e=>{
+        this.setState({formSend:false});
+        this.setState({errName:false});
+        this.setState({errEmail:false});
+        this.setState({errMessage:false});
+
+        const mailReg = /^[0-9a-z_.-]+@[0-9a-z.-]+\.[a-z]{2,3}$/i;
+        const nameReg = /^[a-zA-Z]{2,}$/i;
+
+        let name=this.state.name;
+        let email=this.state.email;
+        let message=this.state.message;
+        e.preventDefault();
+
+        if(nameReg.test(name) && mailReg.test(email) && message.length>120){
+            this.setState({formSend:true})
+
+        }else{
+            if(!nameReg.test(name)){
+                this.setState({errName:true})
+            }
+
+            if(!mailReg.test(email)){
+                this.setState({errEmail:true})
+            }
+
+            if(message.length<=120){
+                this.setState({errMessage:true})
+            }
+        }
+
+        const url="https://fer-api.coderslab.pl/v1/portfolio/contact";
+
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                message: message
+            })
+        })
+            .then(function (data) {
+                console.log( data);
+            })
+            .catch(function (error) {
+            });
+
+
+    };
+
+
+
     render() {
         return (
             <div name="HomeContact" className="contact">
@@ -10,20 +82,24 @@ class HomeContact extends Component {
                     <h2>Skontaktuj się z nami</h2>
                     <div className="decoration"></div>
 
-                    <form>
+                    <form onSubmit={this.handleSubmit}>
                         <div>
                         <label className="inputLabel">Wpisz swoje imię
-                            <input type="text" name="name" placeholder="Krzysztof"/>
+                            <input type="text" name="name" value={this.state.name} onChange={this.handleChange} placeholder="Krzysztof"/>
+                            {this.state.errName && <span className="message" style={{color:'red'}}>Podane imię jest nieprawidłowe!</span>}
                         </label>
 
                             <label className="inputLabel">Wpisz swój email
-                            <input type="email" name="email" placeholder="abc@xyz.com"/>
+                            <input type="email" name="email" value={this.state.email} onChange={this.handleChange} placeholder="abc@xyz.com"/>
+                                {this.state.errEmail && <span className="message" style={{color:'red'}}>Podany email jest nieprawidłowy!</span>}
                         </label>
                         </div>
                         <label className="textareaLabel">Wpisz swoją wiadomość
-                            <textarea rows="4" cols="30" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus urna nibh, at scelerisque odio porta sed. Fusce sagittis sapien leo, a mollis urna luctus a. Vestibulum nec est tincidunt tellus vestibulum tincidunt ac sit amet augue."/>
+                            <textarea rows="4" cols="30" name="message" value={this.state.message} onChange={this.handleChange} placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus urna nibh, at scelerisque odio porta sed. Fusce sagittis sapien leo, a mollis urna luctus a. Vestibulum nec est tincidunt tellus vestibulum tincidunt ac sit amet augue."/>
+                            {this.state.errMessage && <span className="message" style={{color:'red'}}>Wiadomośc musi mieć conajmniej 120 znaków!</span>}
                         </label>
-                        {/*<input type="submit" value="Wyślij" />*/}
+                        <input type='submit' value='Wyślij'/>
+                        {this.state.formSend && <span className="message" style={{color:'green'}}>Dziękujemy za wysłanie formularza</span>}
                     </form>
                 </div>
                 <Footer />
