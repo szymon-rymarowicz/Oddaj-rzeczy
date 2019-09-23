@@ -1,3 +1,117 @@
-.register_section {
+.registration {
   margin-right: 10%;
+}
+
+@import "../../scss/settings/colors";
+
+.regNav {
+  margin-right: 10%;
+}
+
+.regView {
+  margin-top: 2rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  .regForm {
+
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    color: map_get($colors, "darkgrey");
+
+    span {
+      font-size: 2rem;
+      color: map_get($colors, "darkgrey");
+
+    }
+
+    .deco {
+      background-image: url("../../assets/Decoration.svg");
+      width: 60%;
+      height: 2rem;
+      margin: 1rem 0 1rem 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      display: flex;
+    }
+
+    form {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+
+      .errorMessage {
+        font-size: 0.7rem;
+        font-weight: bold;
+      }
+
+      .inputs {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        background-color: map_get($colors, "white");
+
+        .loginInput {
+          width: 12rem;
+          margin: 1rem 0 1rem 0;
+          font-size: 0.9rem;
+          font-weight: bold;
+
+
+          input {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-bottom: 0.1rem solid map_get($colors, "grey");
+            width: 100%;
+            background: none;
+          }
+
+        }
+
+      }
+
+      .buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .buttonStyle {
+          &:hover {
+            border: 0.0625rem solid map_get($colors, "grey");
+          }
+
+          margin-top: 2rem;
+          width: 6.5rem;
+          height: 2.5rem;
+          background: none;
+          color: map_get($colors, "darkgrey");
+          font-size: 0.9rem;
+          outline: none;
+          text-decoration: none;
+
+          a {
+            text-decoration: none;
+            color: map_get($colors, "darkgrey");
+          }
+
+        }
+      }
+    }
+  }
 }

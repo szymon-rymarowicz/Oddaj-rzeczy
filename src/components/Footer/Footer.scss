@@ -1,31 +1,34 @@
+@import "../../scss/settings/colors";
+
 .footer {
-  width: 45%;
+  height: 3rem;
+  width: 50%;
   display: flex;
   justify-content: space-between;
-  height: 5%;
-  font-size: 0.8rem;
-  margin-right: 5%;
 
-  .icons {
+  .copyright {
+    font-size: 0.8rem;
+  }
+
+
+  .logo{
     display: flex;
+    margin-right:11%;
 
-
-    .facebook {
-      background-image: url("../../assets/Facebook.svg");
-      background-repeat: no-repeat;
+    .facebook{
+      background: url("../../assets/Facebook.svg") no-repeat;
+      width: 1.5rem;
+      height: 1.5rem;
       background-size: contain;
-      width: 1.35rem;
-      height: 1.35rem;
-      margin: 0 0.5rem;
+
     }
 
     .instagram {
-      background-image: url("../../assets/Instagram.svg");
-      background-repeat: no-repeat;
+      background: url("../../assets/Instagram.svg") no-repeat;
+      width: 1.5rem;
+      height: 1.5rem;
       background-size: contain;
-      width: 1.35rem;
-      height: 1.35rem;
-      margin: 0 0.5rem;
+      margin-left: 1rem;
     }
   }
 }

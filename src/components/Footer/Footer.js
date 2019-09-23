@@ -3,18 +3,20 @@ import "./Footer.scss";
 
 
 
-class Footer extends Component {
+class Footer extends Component{
     render() {
-        return (
-            <div className="footer">
-                <span>Copyright by Coders Lab</span>
-                <div className="icons">
-                    <div className="facebook"></div>
-                    <div className="instagram"></div>
+        return(
+            <footer className={"footer"}>
+                <div className={"copyright"}>Copyright by Coders Lab</div>
+                <div className={"logo"}>
+                    <div className={"facebook"}></div>
+                    <div className={"instagram"}></div>
                 </div>
-            </div>
+
+            </footer>
         )
     }
+
 }
 
 export default Footer;
