@@ -1,16 +1,19 @@
 import React, {Component} from 'react';
-import "./Register.scss"
 import Navigation from "../Navigation/Navigation";
 import {NavLink} from "react-router-dom";
 
 class Register extends Component {
+
     state = {
         name: "",
         email: "",
         password: "",
+        confirmPassword: "",
         formSend: false,
         errEmail: false,
         errPsw: false,
+        errConfirmPsw: false
+
 
     };
 
@@ -20,31 +23,49 @@ class Register extends Component {
         })
     };
     handleOnSubmit = e => {
-        this.setState({formSend: false});
-        this.setState({errPsw: false});
-        this.setState({errEmail: false});
-        this.setState({errConfirmPsw: false});
-
-
         const mailReg = /^[0-9a-z_.-]+@[0-9a-z.-]+\.[a-z]{2,3}$/i;
         let email = this.state.email;
         let confirm = this.state.confirmPassword;
         let psw = this.state.password;
+        let errConfirmPsw = this.state.errConfirmPsw;
+        let formSend = false;
+        let errPsw = false;
+        let errEmail = false;
+
 
         e.preventDefault();
+
+
         if (mailReg.test(email) && psw.length >= 6 && confirm === psw && confirm.length >= 6) {
-            this.setState({formSend: true})
+            formSend = true;
         } else {
             if (!mailReg.test(email)) {
-                this.setState({errEmail: true})
+                errEmail = true;
             }
             if (psw.length < 6) {
-                this.setState({errPsw: true})
+                errPsw = true;
             }
             if (psw !== confirm) {
-                this.setState({errConfirmPsw: true})
+                errConfirmPsw = true;
             }
         }
+        this.setState({formSend: formSend, errPsw: errPsw, errEmail: errEmail, errConfirmPsw: errConfirmPsw});
+
+        if (formSend === true) {
+            this.props.firebase
+                .doCreateUserWithEmailAndPassword(email, psw)
+                .then(authUser => {
+                    console.log("zarejestrowano pomyslnie");
+
+                    this.setState({email: "", password: "", confirm: "",});
+                    this.props.history.push("/")
+                })
+                .catch(error => {
+                    console.log(error);
+                    this.setState({error});
+                });
+        }
+
 
     };
 
