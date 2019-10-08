@@ -3,8 +3,8 @@ import "./Login.scss"
 import Navigation from "../Navigation/Navigation";
 import {NavLink} from "react-router-dom";
 
-
 class Login extends Component {
+
     state = {
         name: "",
         email: "",
@@ -12,7 +12,7 @@ class Login extends Component {
         formSend: false,
         errEmail: false,
         errPsw: false,
-        errPsw2:false,
+        errPsw2: false
     };
 
     handleOnChange = e => {
@@ -21,17 +21,15 @@ class Login extends Component {
         })
     };
 
-
     handleOnSubmit = e => {
-
 
         const mailReg = /^[0-9a-z_.-]+@[0-9a-z.-]+\.[a-z]{2,3}$/i;
         let email = this.state.email;
         let psw = this.state.password;
-        let formSend = false;
+        let formSend;
         let errPsw = false;
         let errEmail = false;
-        let errPsw2=false;
+        let errPsw2 = false;
         e.preventDefault();
 
         if (!mailReg.test(email)) {
@@ -60,17 +58,12 @@ class Login extends Component {
                     if(error.code==="auth/wrong-password"){
                         errPsw2=true;
 
-
-
                     }
                     this.setState({errPsw2:errPsw2});
                 });
         }
 
-
-    }
-
-    ;
+    };
 
     render() {
         return (
@@ -99,10 +92,9 @@ class Login extends Component {
 
                             </div>
                             <div className={"buttons"}>
-                                <NavLink to={"/rejestracja"}>Załóż
-                                    konto</NavLink>
+                                <button type='submit' className={"buttonStyle"} ><NavLink to={"/logowanie"}>Zaloguj</NavLink>
+                                </button>
                                 <input type='submit' value='Zaloguj' className={"buttonStyle"}/>
-
                             </div>
 
 
