@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Oddaj-rzeczy/static/css/main.531377c0.chunk.css",
+    "main.js": "/Oddaj-rzeczy/static/js/main.b5695c14.chunk.js",
+    "main.js.map": "/Oddaj-rzeczy/static/js/main.b5695c14.chunk.js.map",
+    "runtime~main.js": "/Oddaj-rzeczy/static/js/runtime~main.671b75a0.js",
+    "runtime~main.js.map": "/Oddaj-rzeczy/static/js/runtime~main.671b75a0.js.map",
+    "static/js/2.b6837fdd.chunk.js": "/Oddaj-rzeczy/static/js/2.b6837fdd.chunk.js",
+    "static/js/2.b6837fdd.chunk.js.map": "/Oddaj-rzeczy/static/js/2.b6837fdd.chunk.js.map",
+    "index.html": "/Oddaj-rzeczy/index.html",
+    "precache-manifest.4332fc81479389041e10a3d69acad35c.js": "/Oddaj-rzeczy/precache-manifest.4332fc81479389041e10a3d69acad35c.js",
+    "service-worker.js": "/Oddaj-rzeczy/service-worker.js",
+    "static/css/main.531377c0.chunk.css.map": "/Oddaj-rzeczy/static/css/main.531377c0.chunk.css.map",
+    "static/media/HomeContact.scss": "/Oddaj-rzeczy/static/media/Background-Contact-Form.f4db7ddd.jpg",
+    "static/media/Register.scss": "/Oddaj-rzeczy/static/media/Decoration.2290784e.svg",
+    "static/media/Footer.scss": "/Oddaj-rzeczy/static/media/Instagram.703479fd.svg",
+    "static/media/HomeHeader.scss": "/Oddaj-rzeczy/static/media/Home-Hero-Image.e99903ed.jpg",
+    "static/media/HomeFourSteps.scss": "/Oddaj-rzeczy/static/media/Icon-4.436df0aa.svg",
+    "static/media/HomeAbout.scss": "/Oddaj-rzeczy/static/media/Signature.e54cfcfc.svg"
+  }
+}
